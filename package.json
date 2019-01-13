@@ -1,0 +1,22 @@
+{
+  "name": "electron1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out --osx-sign.identity='Developer ID Application: GitHub' --extend-info=assets/mac/info.plist",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out --icon=assets/app-icon/win/app.ico --buildVersion=1.0 --appVersion=1.0 --appCopyright=11 --win32metadata=1",
+    "package:linux": "electron-packager . --overwrite --platform=linux --arch=x64 --out=out",
+    "package:arm64": "electron-packager . --overwrite --platform=linux --arch=arm64 --out=out",
+    "package:armv7l": "electron-packager . --overwrite --platform=linux --arch=armv7l --out=out"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-packager": "^13.0.1"
+  }
+}
